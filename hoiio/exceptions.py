@@ -1,0 +1,3 @@
+
+class HoiioException(Exception):
+    pass
