@@ -33,9 +33,9 @@ The HoiioRestClient needs your Hoiio credentials. You can either pass these dire
 ```python
 from hoiio.rest import HoiioRestClient
 
-appId = 'YOUR_APP_ID_HERE'
+appid = 'YOUR_APPID_HERE'
 token = 'YOUR_TOKEN_HERE'
-client = HoiioRestClient(appId, token)
+client = HoiioRestClient(appid, token)
 ```
 
 ### Make a call
@@ -43,9 +43,9 @@ client = HoiioRestClient(appId, token)
 ```python
 from hoiio.rest import HoiioRestClient
 
-appId = 'YOUR_APP_ID_HERE'
+appid = 'YOUR_APPID_HERE'
 token = 'YOUR_TOKEN_HERE'
-client = HoiioRestClient(appId, token)
+client = HoiioRestClient(appid, token)
 
 resp = client.voice.call(dest='+6512345678', dest2='+6554326547', caller_id='Hoiio')
 ```
@@ -56,9 +56,9 @@ resp = client.voice.call(dest='+6512345678', dest2='+6554326547', caller_id='Hoi
 ```python
 from hoiio.rest import HoiioRestClient
 
-appId = 'YOUR_APP_ID_HERE'
+appid = 'YOUR_APPID_HERE'
 token = 'YOUR_TOKEN_HERE'
-client = HoiioRestClient(appId, token)
+client = HoiioRestClient(appid, token)
 
 resp = client.sms.send(dest='+6565123476', message='Hello World')
 ```
@@ -68,9 +68,9 @@ resp = client.sms.send(dest='+6565123476', message='Hello World')
 ```python
 from hoiio.rest import HoiioRestClient
 
-appId = 'YOUR_APP_ID_HERE'
+appid = 'YOUR_APPID_HERE'
 token = 'YOUR_TOKEN_HERE'
-client = HoiioRestClient(appId, token)
+client = HoiioRestClient(appid, token)
 
 resp = client.number.subscribe(number='+6567589405', duration=60)
 ```
@@ -80,9 +80,9 @@ resp = client.number.subscribe(number='+6567589405', duration=60)
 ```python
 from hoiio.rest import HoiioRestClient
 
-appId = 'YOUR_APP_ID_HERE'
+appid = 'YOUR_APPID_HERE'
 token = 'YOUR_TOKEN_HERE'
-client = HoiioRestClient(appId, token)
+client = HoiioRestClient(appid, token)
 
 resp = client.account.balance()
 ```
