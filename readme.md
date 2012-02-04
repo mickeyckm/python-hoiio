@@ -1,4 +1,10 @@
+# Python-Hoiio
+
 A python module for using Hoiio REST API.
+
+## Requirements
+
+* Python >= 2.6
 
 ## Installation
 
@@ -27,8 +33,65 @@ The HoiioRestClient needs your Hoiio credentials. You can either pass these dire
 ```python
 from hoiio.rest import HoiioRestClient
 
-account = "ACXXXXXXXXXXXXXXXXX"
-token = "YYYYYYYYYYYYYYYYYY"
-client = HoiioRestClient(account, token)
+appId = 'YOUR_APP_ID_HERE'
+token = 'YOUR_TOKEN_HERE'
+client = HoiioRestClient(appId, token)
 ```
+
+### Make a call
+
+```python
+from hoiio.rest import HoiioRestClient
+
+appId = 'YOUR_APP_ID_HERE'
+token = 'YOUR_TOKEN_HERE'
+client = HoiioRestClient(appId, token)
+
+resp = client.voice.call(dest='+6512345678', dest2='+6554326547', caller_id='Hoiio')
+```
+
+
+### Send a sms
+
+```python
+from hoiio.rest import HoiioRestClient
+
+appId = 'YOUR_APP_ID_HERE'
+token = 'YOUR_TOKEN_HERE'
+client = HoiioRestClient(appId, token)
+
+resp = client.sms.send(dest='+6565123476', message='Hello World')
+```
+
+### Subcribe a number
+
+```python
+from hoiio.rest import HoiioRestClient
+
+appId = 'YOUR_APP_ID_HERE'
+token = 'YOUR_TOKEN_HERE'
+client = HoiioRestClient(appId, token)
+
+resp = client.number.subscribe(number='+6567589405', duration=60)
+```
+
+### Get account balance
+
+```python
+from hoiio.rest import HoiioRestClient
+
+appId = 'YOUR_APP_ID_HERE'
+token = 'YOUR_TOKEN_HERE'
+client = HoiioRestClient(appId, token)
+
+resp = client.account.balance()
+```
+
+## License
+
+This project is under [MIT License](http://en.wikipedia.org/wiki/MIT_License).
+See LICENSE file for details.
+
+
+
 
