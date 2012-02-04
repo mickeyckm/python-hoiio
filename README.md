@@ -5,6 +5,7 @@ A python module for using Hoiio REST API.
 ## Requirements
 
 * Python >= 2.6
+* Requests >= 0.10.2 
 
 ## Installation
 
