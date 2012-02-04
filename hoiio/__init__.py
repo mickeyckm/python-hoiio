@@ -1,0 +1,5 @@
+__title__ = 'python-hoiio'
+__version__ = '0.1'
+__author__ = 'Mickey Cheong'
+__license__ = 'MIT License'
+__copyright__ = 'Copyright 2012 Mickey Cheong'
