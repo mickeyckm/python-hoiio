@@ -1,2 +1,8 @@
 *.esproj
+
+# python
+build/
+dist/
+*.egg-info
+
 test.py
