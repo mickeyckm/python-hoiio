@@ -88,6 +88,19 @@ client = HoiioRestClient(appid, token)
 resp = client.account.balance()
 ```
 
+### Dial a number
+
+```python
+from hoiio.rest import HoiioRestClient
+
+appid = 'YOUR_APPID_HERE'
+token = 'YOUR_TOKEN_HERE'
+client = HoiioRestClient(appid, token)
+
+resp = client.ivr.dial(params={ 'dest': '+6599238829', \
+                                'msg': '<speech language="en" gender="male">Hello World</speech>' })
+```
+
 ## License
 
 Copyright (c) Mickey Cheong and individual contributors.
