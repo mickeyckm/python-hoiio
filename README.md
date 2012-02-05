@@ -1,6 +1,6 @@
 # Python-Hoiio
 
-A python module for using Hoiio REST API.
+A python module for using [Hoiio](http://developer.hoiio.com/ "Hoiio for Developers") REST API.
 
 ## Requirements
 
