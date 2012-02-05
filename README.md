@@ -5,7 +5,7 @@ A python module for using [Hoiio](http://developer.hoiio.com/ "Hoiio for Develop
 ## Requirements
 
 * Python >= 2.6
-* Requests >= 0.10.2 
+* [Requests](https://github.com/kennethreitz/requests "Requests") >= 0.10.2 
 
 ## Installation
 
