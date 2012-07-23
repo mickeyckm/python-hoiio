@@ -48,7 +48,7 @@ appid = 'YOUR_APPID_HERE'
 token = 'YOUR_TOKEN_HERE'
 client = HoiioRestClient(appid, token)
 
-resp = client.voice.call(params={ dest:'+6512345678', dest2:'+6554326547', caller_id:'Mickey Cheong' })
+resp = client.voice.call(params={ 'dest':'+6512345678', 'dest2':'+6554326547', 'caller_id':'Mickey Cheong' })
 ```
 
 
@@ -61,7 +61,7 @@ appid = 'YOUR_APPID_HERE'
 token = 'YOUR_TOKEN_HERE'
 client = HoiioRestClient(appid, token)
 
-resp = client.sms.send({ dest:'+6565123476', message:'Hello, Mickey' })
+resp = client.sms.send({ 'dest':'+6565123476', 'msg':'Hello, Mickey' })
 ```
 
 ### Subcribe a number
@@ -73,7 +73,7 @@ appid = 'YOUR_APPID_HERE'
 token = 'YOUR_TOKEN_HERE'
 client = HoiioRestClient(appid, token)
 
-resp = client.number.subscribe({ number:'+6567589405', duration:60 })
+resp = client.number.subscribe({ 'number':'+6567589405', 'duration':60 })
 ```
 
 ### Get account balance
@@ -100,6 +100,33 @@ client = HoiioRestClient(appid, token)
 resp = client.ivr.dial(params={ 'dest': '+6599238829', \
                                 'msg': '<speech language="en" gender="male">Hello World</speech>' })
 ```
+
+
+### New APIs added by samwize
+
+```python
+# Send bulk SMS
+resp = client.sms.bulk_send({ 'dest':'+6511111111,+6522222222', 'msg':'Hello, Mickey' })
+
+# Get countries which has Hoiio local numbers
+resp = client.number.get_countries()
+
+# Pretty print it
+import simplejson as json
+d = json.loads(resp)
+import pprint
+pprint.pprint(d)
+
+# Fax 
+resp = client.fax.send('fax.pdf', { 'dest':'+6567473246'})
+resp = client.fax.get_history()
+resp = client.fax.get_rate({ 'dest':'+6511111111', 'incoming':'+6500000000'})
+resp = client.fax.query_status({ 'txn_ref':'AA-1234'})
+
+```
+
+
+
 
 ## License
 

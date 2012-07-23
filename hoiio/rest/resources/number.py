@@ -4,6 +4,11 @@ class Number(Resource):
 
     name = 'number'
     
+    def get_countries(self, params={}):
+        cleaned_params = self.sanitize(params)
+        method_uri = self.get_method_uri('get_countries')
+        return self.request(method='get', uri=method_uri, data=cleaned_params)
+
     def get_choices(self, params={}):
         cleaned_params = self.sanitize(params)
         method_uri = self.get_method_uri('get_choices')
