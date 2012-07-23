@@ -43,3 +43,4 @@ from .ivr import IVR
 from .number import Number
 from .sms import SMS
 from .voice import Voice
+from .fax import Fax

@@ -1,4 +1,5 @@
 *.esproj
+*.py[co]
 
 # python
 build/
@@ -6,3 +7,4 @@ dist/
 *.egg-info
 
 test.py
+fax.pdf

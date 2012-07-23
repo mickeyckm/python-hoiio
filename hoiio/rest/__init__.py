@@ -5,6 +5,7 @@ from hoiio.rest.resources import IVR
 from hoiio.rest.resources import Number
 from hoiio.rest.resources import SMS
 from hoiio.rest.resources import Voice
+from hoiio.rest.resources import Fax
 
 class HoiioRestClient(object):
 
@@ -14,7 +15,7 @@ class HoiioRestClient(object):
             raise HoiioException("""
                 Hoiio could not find your application credentials. Pass them into HoiioRestClient constructor like this:
                 
-                    client = HoiioRestClient(appid='TnsL1P6ggsZGIsNW', token='MmwkKinHK47brUwc') 
+                    client = HoiioRestClient(appid='YOUR_APP_ID', token='YOUR_ACCESS_TOKEN') 
                 """)
                 
         api_uri = 'https://secure.hoiio.com/open'
@@ -25,6 +26,7 @@ class HoiioRestClient(object):
         self.number = Number(api_uri, auth)        
         self.sms = SMS(api_uri, auth)
         self.voice = Voice(api_uri, auth)
+        self.fax = Fax(api_uri, auth)
         
         self.api_uri = api_uri
         self.auth = auth
